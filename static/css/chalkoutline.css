@@ -1,0 +1,21 @@
+BODY { font-family:tahoma,helvetica,arial; font-size:10pt; color:#000000; font-weight:500 }
+TD {font-family:tahoma,helvetica,arial; font-size:8pt; color:#909090; font-weight:500; font-style:normal }
+p { text-align:justify }
+B {color:#FFFFFF; font-weight:800; font-style:normal }
+.l { text-align:right }
+.m { text-align:center }
+.r { text-align:right }
+.j { text-align:justify }
+.title {font-family:times new roman, times; font-size:16pt; color:#CDCDCD; font-weight:500; font-style:normal }
+.line { background:#FFFFFF }
+.pline { background:#CC0000 }
+
+A:link { color:#9E9E9E; text-decoration:underline; font-family:tahoma,helvetica,arial; font-size:8pt; TEXT-DECORATION:none  }
+A:visited { color:#9E9E9E; text-decoration:underline; font-family:tahoma,helvetica,arial; font-size:8pt; TEXT-DECORATION:none } 
+A:active { color:#9E9E9E; text-decoration:underline; font-family:tahoma,helvetica,arial; font-size:8pt; TEXT-DECORATION:none } 
+A:hover { color:#9E9E9E; text-decoration:none; font-family:tahoma,helvetica,arial; font-size:8pt; TEXT-DECORATION:underline }
+
+.footlink:link { COLOR:#FFFFFF; FONT-WEIGHT:500; FONT-SIZE:8pt; FONT-FAMILY:tahoma,helvetica,arial; TEXT-DECORATION:none }
+.footlink:visited { COLOR:#FFFFFF; FONT-WEIGHT:500; FONT-SIZE:8pt; FONT-FAMILY:tahoma,helvetica,arial; TEXT-DECORATION:none }
+.footlink:active { COLOR:#FFFFFF; FONT-WEIGHT:500; FONT-SIZE:8pt; FONT-FAMILY:tahoma,helvetica,arial; TEXT-DECORATION:none }
+.footlink:hover { COLOR:#FFFFFF; FONT-WEIGHT:500; FONT-SIZE:8pt; FONT-FAMILY:tahoma,helvetica,arial; TEXT-DECORATION:underline }

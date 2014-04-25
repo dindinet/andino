@@ -1,0 +1,24 @@
+BODY { font-family:tahoma,helvetica,arial; font-size:10pt; color:#000000; font-weight:500; background:#ffffff; }
+TD {font-family:tahoma,helvetica,arial; font-size:8pt; color:#909090; font-weight:500; font-style:normal }
+p { text-align:justify }
+B {color:#FFFFFF; font-weight:800; font-style:normal }
+.ltext {font-family:tahoma,helvetica,arial; font-size:8pt; color:#7B8594; font-weight:500; font-style:normal; text-align:right }
+.gtext {font-family:tahoma,helvetica,arial; font-size:8pt; color:#7B8594; font-weight:500; font-style:normal }
+.l { text-align:right }
+.m { text-align:center }
+.r { text-align:right }
+.j { text-align:justify }
+.title {font-family:times new roman, times; font-size:16pt; color:#CDCDCD; font-weight:500; font-style:normal }
+.line { background:#A9B0B9 }
+.pline { background:#CC0000 }
+.form { BACKGROUND-COLOR:#7B8594; BORDER-BOTTOM: #A9B0B9 1px solid; BORDER-LEFT: #A9B0B9 1px solid; BORDER-RIGHT: #A9B0B9 1px solid;	BORDER-TOP: #A9B0B9 1px solid; COLOR: #FFFFFF; FONT-FAMILY: tahoma,Arial,Helvetica; FONT-SIZE: 11px; FONT-WEIGHT: 500 }
+
+A:link { color:#FFFFFF; text-decoration:underline; FONT-WEIGHT:800; font-family:tahoma,helvetica,arial; font-size:10pt; TEXT-DECORATION:none  }
+A:visited { color:#FFFFFF; text-decoration:underline; FONT-WEIGHT:800; font-family:tahoma,helvetica,arial; font-size:10pt; TEXT-DECORATION:none } 
+A:active { color:#FFFFFF; text-decoration:underline; FONT-WEIGHT:800; font-family:tahoma,helvetica,arial; font-size:10pt; TEXT-DECORATION:none } 
+A:hover { color:#FFFFFF; text-decoration:none; FONT-WEIGHT:800; font-family:tahoma,helvetica,arial; font-size:10pt; TEXT-DECORATION:underline }
+
+.footlink:link { COLOR:#404040; FONT-WEIGHT:500; FONT-SIZE:8pt; FONT-FAMILY:tahoma,helvetica,arial; TEXT-DECORATION:none }
+.footlink:visited { COLOR:#404040; FONT-WEIGHT:500; FONT-SIZE:8pt; FONT-FAMILY:tahoma,helvetica,arial; TEXT-DECORATION:none }
+.footlink:active { COLOR:#404040; FONT-WEIGHT:500; FONT-SIZE:8pt; FONT-FAMILY:tahoma,helvetica,arial; TEXT-DECORATION:none }
+.footlink:hover { COLOR:#404040; FONT-WEIGHT:500; FONT-SIZE:8pt; FONT-FAMILY:tahoma,helvetica,arial; TEXT-DECORATION:underline }
