@@ -2,6 +2,22 @@
 <head>
 <title>You Tube Channel Stream</title>
 <style>
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
   #videogroup {
     width: 100%;
   }
@@ -64,11 +80,11 @@ function listVideos(data) {
     var entriesDescription=entries[i].media$group.media$description.$t;
     var entriesThumbnail=entries[i].media$group.media$thumbnail[0].url;
     myOutput += '<li><div class="entriestitle">' + entriesTitle + '</div>';
-    myOutput+='<iframe width="560" height="315" src="//www.youtube.com/embed/'+entriesID+'" frameborder="0" allowfullscreen></iframe>';
+    myOutput+='<iframe width="560" height="315" src="//www.youtube.com/embed/'+entriesID+'" frameborder="0" allowfullscreen></iframe></div>';
     if (i==0) {
       firstOutput += '<div class="first">';
       firstOutput += '<h2>' + entriesTitle + '</h2>';
-      firstOutput += '<iframe width="560" height="315" src="//www.youtube.com/embed/'+entriesID+'" frameborder="0" allowfullscreen></iframe>';
+      firstOutput += '<div class="video-container" ><iframe width="560" height="315" src="//www.youtube.com/embed/'+entriesID+'" frameborder="0" allowfullscreen></iframe></div>';
       firstOutput += '<p>' + entriesDescription + '</p>';
       firstOutput += '</div>';
       document.getElementById('myplayer').innerHTML=firstOutput;
@@ -83,7 +99,7 @@ function listVideos(data) {
   <div id="myplayer"></div>
   <div id="videolist"></div>
 </div>
-<iframe width="560" height="315" src="//www.youtube.com/embed/ZRF_atgPLE0?list=UUsu85KvZyChXpP98G41UloQ" frameborder="0" allowfullscreen></iframe>
+<div class="video-container"><iframe width="560" height="315" src="//www.youtube.com/embed/ZRF_atgPLE0?list=UUsu85KvZyChXpP98G41UloQ" frameborder="0" allowfullscreen></iframe></div>
 </body>
 </html>
 
