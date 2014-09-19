@@ -1,0 +1,112 @@
+<html>
+<head>
+<title>You Tube Channel Stream</title>
+<style>
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+.first .video-container iframe,
+.first .video-container object,
+.first .video-container embed {
+    width: 100%;
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 90%;
+}
+
+  #videogroup {
+    width: 90%;
+  }
+
+ iframe {
+    width: 90%;
+    padding: 5%;
+  }
+
+  #myplayer .first iframe {
+    width: 100%;
+    padding: 0;
+  }
+  
+  #videolist ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  #videolist li {
+    width: 50%;
+    float: left;
+    border: none;
+    position: relative;
+  }
+
+  #videolist li .entriestitle {
+    padding: 0 5px;
+    position: absolute;
+    left:80%;
+    top:20%;
+    display: none;
+  }
+  
+  #videolist li:hover .entriestitle {
+    display: block;
+    width: 100%;
+    background: rgb(119, 25, 51);
+    border-radius: 10px;
+    color: #FFF;
+    padding: 10px;
+    opacity: .9;
+    z-index: 100;
+    right: 0;
+  }
+
+</style>
+</head>
+<body>
+<!-- This could be interesting tagliatelli-->
+<iframe src="https://docs.google.com/presentation/d/1tMz_J1rcPv-JoP6FGBFFp9a9BQ-1LXbjicxx7ccK6Nk/embed?start=true&loop=true&delayms=3000" frameborder="0" width="1440" height="839" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<script type="text/javascript">
+
+function listVideos(data) {
+  var firstOutput="";
+  var entries = data.feed.entry;
+  var myOutput = '<ul>';
+  for (var i=0; i<data.feed.entry.length; i++) {
+    var entriesID=entries[i].id.$t.substring(38);
+    var entriesTitle=entries[i].title.$t;
+    var entriesDescription=entries[i].media$group.media$description.$t;
+    var entriesThumbnail=entries[i].media$group.media$thumbnail[0].url;
+    myOutput += '<li><div class="entriestitle">' + entriesTitle + '</div>';
+    myOutput+='<div class="video-container" ><iframe width="560" height="315" src="//www.youtube.com/embed/'+entriesID+'" frameborder="0" allowfullscreen></iframe></div>';
+    if (i==0) {
+      firstOutput += '<div class="first">';
+      firstOutput += '<h2>' + entriesTitle + '</h2>';
+      firstOutput += '<div class="video-container" ><iframe width="560" height="315" src="//www.youtube.com/embed/'+entriesID+'" frameborder="0" allowfullscreen></iframe></div>';
+      firstOutput += '<p>' + entriesDescription + '</p>';
+      firstOutput += '</div>';
+      document.getElementById('myplayer').innerHTML=firstOutput;
+    }
+  }
+  document.getElementById('videolist').innerHTML = myOutput;
+  myOutput +='</ul>';
+}
+</script>
+
+<div id="videogroup">
+  <div id="myplayer"></div>
+  <div id="videolist"></div>
+</div>
+</body>
+</html>
+
+<script type="text/javascript" src="http://gdata.youtube.com/feeds/users/dindinet/uploads?alt=json-in-script&callback=listVideos"></script>
