@@ -1,0 +1,1 @@
+#written with the keys punched by fingers
