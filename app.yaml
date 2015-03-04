@@ -4,7 +4,7 @@ runtime: python27
 api_version: 1
 threadsafe: true
 
-default_expiration: "7d"
+default_expiration: "1m"
 
 handlers:
 - url: /
@@ -13,7 +13,7 @@ handlers:
 
 - url: /
   static_dir: static
-  
+
 - url: /favicon.ico
   static_files: favicon.ico
   upload: favicon.ico
